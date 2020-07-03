@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Faculty Recruitment System</string>
+    <string name="Login"></string>
+    <string name="Registeration"></string>
+    <string name="Homepage"></string>
+    <string name="List_of_Roles"></string>
+    <string name="Status"></string>
+    <string name="Details"></string>
+</resources>

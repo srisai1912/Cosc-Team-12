@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg4">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="39dp"
+                android:ems="10"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.072" />
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="270dp"
+                android:layout_height="39dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginBottom="30dp"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/emailID"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:ems="10"
+                android:hint="Email ID"
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+                app:layout_constraintVertical_bias="0.088" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.422"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+                app:layout_constraintVertical_bias="0.115" />
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Phone Number" />
+
+            <EditText
+                android:id="@+id/aadharNumber"
+                android:layout_width="270dp"
+                android:layout_height="040dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Aadhar Number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="040dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:text="Gender:"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="270dp"
+                android:layout_height="101dp"
+                android:layout_marginLeft="70dp"
+                android:checkedButton="@+id/other"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+                app:layout_constraintVertical_bias="0.178">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/other"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="Other" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/qualifications"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Qualifications"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/deptqual"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Qualified Department (ex:CSE,.) "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/collegeName"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="University/College Name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/cgpa"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="CGPA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/collegeBatch"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="College Batch (ex:2001-2005)"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="D.O.B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/currentAddress"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Current Address"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/permanentAddress"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Permanent Address"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/experience"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Experience(in years)"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187" />
+
+            <EditText
+                android:id="@+id/previousOffice"
+                android:layout_width="272dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Previous Office/College/University"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187"
+                tools:ignore="DuplicateIds" />
+
+            <EditText
+                android:id="@+id/previousPosition"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Previous Position"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187"
+                tools:ignore="DuplicateIds" />
+
+            <EditText
+                android:id="@+id/achievements"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="29dp"
+                android:ems="10"
+                android:hint="Achievements"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+                app:layout_constraintVertical_bias="0.187"
+                tools:ignore="DuplicateIds" />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="29dp"
+                android:background="@drawable/bluebuttons"
+                android:text="Register"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bluebuttons"
+                android:text="Login Now"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
