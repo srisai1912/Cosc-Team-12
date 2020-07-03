@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'tablestatic/images/icons/favicon.ico' %}"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/css/util.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/css/main.css' %}">
+    <!--===============================================================================================-->
+    <style>
+        .limiter{
+            width:100%
+        }
+        .wrap-login1001 {
+            width: 1280px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 33px 70px 33px 0px;
+        }
+        #VT{
+            margin-left: 550px;
+            font-family: Lato-Bold;
+            }
+        .container-login100-form-btn{
+            margin-left: 100px;
+            width: 200px;
+        }
+    </style>
+    {% if alert_flag %}
+    <script>alert("Failed to Upload! Try Again")</script>  
+    {% endif %}
+    <title>SelectApplicants</title>
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login1001">
+                <div class="buttContainer">
+                    <span id="VT">SELECT APPLICANTS</span>
+                    <div class="container-table100">
+                        <div class="wrap-table100">
+                            <div class="table100 ver3 m-b-110">
+                                <div class="table100-head">
+                                    <table>
+                                        <thead>
+                                            <tr class="row100 head">
+                                                <th class="cell100 column1"style="width: 100px;">Email</th>                                                
+                                                <th class="cell100 column2" style="width: 100px;">Application No</th>                                                
+                                                <th class="cell100 column3" style="width: 100px;">Department</th>
+                                                <th class="cell100 column3"style="width: 100px;">QUALIFICATION</th>
+                                                <th class="cell100 column4"style="width: 100px;">CGPA</th>
+                                                <th class="cell100 column4">STATUS</th>                    
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+            
+                                <div class="table100-body js-pscroll">
+                                    <form method="POST" id="form2" action="pselect">
+                                    <table>
+                                        <tbody>
+                                            
+                                                {% for app in apps %}
+                                                <tr class="row100 body">
+                                                    <td class="cell100 column1" style="width: 15px;">{{app.EmailId}}</td>
+                                                    <td class="cell100 column2" style="width:0px;">{{app.Application_id}}</td>
+                                                    <td class="cell100 column3" style="width: 0px;">{{app.Dept_Qualified}}</td>
+                                                    <td class="cell100 column3" style="width: 0px;">{{app.Qualification}}</td>
+                                                    <td class="cell100 column4"style="width: 0px;">{{app.CGPA}}</td>
+                                                    <td class="cell100 column4"><input type="text" name="statuslist" placeholder="RECIEVED" value="RECIEVED "></td>
+                                                </tr>
+                                                {% endfor %}
+                                                
+                                                </div>
+                                            
+                                        </tbody>
+                                    </table>
+                                </form>
+                                    
+                                </div>
+                            </div>
+                            <div class="container-login100-form-btn">
+                                <button type="submit" class="login100-form-btn" form="form2" id="UploadStatus">
+                                    Upload Status
+                                </button>
+                        </div>
+                    </div>
+                    <form id="form1" action="optionsP">
+                    <div class="container-login100-form-btn">
+                        <button type="submit" class="login100-form-btn" form="form1" >
+                            OPTIONS PAGE
+                        </button>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!--===============================================================================================-->	
+<script src="{% static 'tablestatic/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tablestatic/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'tablestatic/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tablestatic/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tablestatic/vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<!--<script src="js/main.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--===============================================================================================-->
+    {% if alert_flag %}
+    <script>alert("Failed to Upload! Try Again")</script>  
+    {% endif %}
+    <script>
+        function validate(form){
+            
+        }
+    </script>
+    <style>
+    .wrap-login1002 {
+        width: 700px;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 33px 70px 33px 210px;
+    }
+</style>
+<title> Upload </title>
+</head>
+<body>
+    <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login1002">
+                <form class="login100-form validate-form" onsubmit="validate(this)" id="form1" method="POST" action="sendvac">
+                    {% csrf_token %}
+                    <div class="login100-form-title" id='uploadvacancies'>
+                        Upload Vacancies
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        Position:<input class="input100" type="text" name="position" placeholder="Position">
+					<span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        Department:<input class="input100" type="text" name="department" placeholder="Department">
+					<span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        Qualification:<input class="input100" type="text" name="Qualification" placeholder="Qualification">
+					<span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        Percentage:<input class="input100" type="text" name="percentage" placeholder="CGPA">
+                    <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn" >
+                        <button type="submit" class="login100-form-btn" form="form1" id="Upload">
+                            Upload
+                        </button>
+                    </div>
+
+                </form>    
+            </div>
+        </div>
+    </div>
+
+</body>

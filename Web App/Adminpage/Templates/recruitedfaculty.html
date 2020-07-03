@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'tablestatic/images/icons/favicon.ico' %}"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/css/util.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'tablestatic/css/main.css' %}">
+    <!--===============================================================================================-->
+    <style>
+        .limiter{
+            width:100%
+        }
+        
+        .wrap-login1001 {
+            width: 700px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 33px 70px 0px 30px;
+
+        }
+        .wrap-table100 {
+            width: 630px;
+            
+        }
+        #RA{
+            margin-left: 15px;
+            font-family: Lato-Bold;
+            }
+        .container-login100-form-btn{
+            margin-bottom: 10px;
+            margin-left: 200px;
+            width: 200px;
+        }
+        
+
+    </style>
+    <title>Recruited Faculty</title>
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login1001">
+                <div class="buttContainer">
+                    <span id="RA">RECRUITED APPLICANTS</span> 
+                       <div class="wrap-table100">
+                            <div class="table100 ver3 m-b-110">
+                                <div class="table100-head">
+                                    <table>
+                                        <thead>
+                                            <tr class="row100 head">
+                                                <th class="cell100 column1">EmailId</th>
+                                                <th class="cell100 column2">FirstName</th>
+                                                <th class="cell100 column3">LastName</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+            
+                                <div class="table100-body js-pscroll">
+                                    <table>
+                                        <tbody>
+                                            {% for recruited_data in recruited_data %}
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">{{recruited_data.EmailId}}</td>
+                                                <td class="cell100 column2">{{recruited_data.First_Name}}</td>
+                                                <td class="cell100 column3">{{recruited_data.Last_Name}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <form id="form1" action="optionsP">
+                            <div class="container-login100-form-btn">
+                                <button type="submit" class="login100-form-btn" form="form1" >
+                                    OPTIONS PAGE
+                                </button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--===============================================================================================-->	
+<script src="{% static 'tablestatic/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tablestatic/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'tablestatic/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tablestatic/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'tablestatic/vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

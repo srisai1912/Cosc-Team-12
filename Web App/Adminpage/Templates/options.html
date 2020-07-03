@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--===============================================================================================-->
+    {% if alert_flag %}
+    <script>alert("Succesfully Uploaded!")</script>  
+    {% endif %}
+    <style>
+        #updatevacancies {
+            margin-top: 0px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 10px !important;
+
+        }
+
+        #selectapplicants {
+            margin-top: 10px;
+            margin-right: 0px !important;
+            margin-bottom: 10px !important;
+        }
+        #VV {
+            margin-top: 10px;
+            margin-right: 0px !important;
+            margin-bottom: 10px !important;
+        }
+        #FA {
+            margin-top: 10px;
+            margin-right: 0px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .wrap-login1001 {
+            width: 960px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 33px 70px 33px 375px;
+        }
+    </style>
+    <title>Options Page</title>
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login1001">
+                <div class="buttContainer">
+                    <form id=formUV action='upload' method="POST">
+                        <button type="submit" class="login100-form-btn" id="updatevacancies" form="formUV" >
+                            Upload Vacancies
+                        </button>
+                    </form>
+                   
+                    <form id=formVV action='viewvac'>
+                        <button type="submit" class="login100-form-btn" id="VV" form="formVV">
+                            View Vacancies
+                        </button>
+                   </form>
+
+                    <form id=formSA action='select'>
+                        <button type="submit" class="login100-form-btn" id="selectapplicants" form="formSA">
+                            Select Applicants
+                        </button>
+                    </form>                   
+                   
+                    <form id=formFA action='recruitedfaculty' method="POST">
+                        <button type="submit" class="login100-form-btn" id="FA" form="formFA">
+                            Finalized Applicants
+                        </button>
+                     </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
